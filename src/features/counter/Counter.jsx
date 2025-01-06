@@ -5,6 +5,7 @@ import {
   increment, 
   decrement, 
   incrementByAmount,
+  decrementByAmount,
   selectCount 
 } from './counterSlice'
 
@@ -42,6 +43,13 @@ export function Counter() {
           className="button"
         >
           Add 5
+        </button>
+
+        <button 
+          onClick={() => dispatch(decrementByAmount(5))}
+          className="button"
+        >
+          minus 5
         </button>
       </div>
     </div>

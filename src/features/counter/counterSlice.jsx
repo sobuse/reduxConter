@@ -26,12 +26,16 @@ export const counterSlice = createSlice({
     incrementByAmount: (state, action) => {
       // action.payload contains the data sent with the action
       state.value += action.payload
+    },
+    
+    decrementByAmount: (state, action) => {
+      state.value -= action.payload
     }
-  }
+}
 })
 
 // Export the action creators
-export const { increment, decrement, incrementByAmount } = counterSlice.actions
+export const { increment, decrement, incrementByAmount,decrementByAmount } = counterSlice.actions
 
 // Export the reducer
 export default counterSlice.reducer
